@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+
+interface Props {
+    lang?: "en" | "es";
+    title?: string;
+}
+
+const { lang = "en", title = "Rodrigo Salvador — Full-Stack Developer" } =
+    Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Portfolio of Rodrigo Salvador, Full-Stack Developer based in Lima, Peru."
+        />
+        <title>{title}</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    </head>
+    <body>
+        <!-- Scroll Progress Bar -->
+        <div id="scroll-progress" style="width: 0%;"></div>
+
+        <Header lang={lang} />
+        <slot />
+    </body>
+</html>
+
+<style is:global>
+    section {
+        scroll-margin-top: 80px;
+    }
+</style>
+
+<script>
+    // Scroll progress bar
+    const progressBar = document.getElementById("scroll-progress");
+    window.addEventListener("scroll", () => {
+        if (!progressBar) return;
+        const scrollTop = window.scrollY;
+        const docHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = `${progress}%`;
+    });
+
+    // Animate on scroll — IntersectionObserver
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.1 },
+    );
+    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+        observer.observe(el);
+    });
+</script>

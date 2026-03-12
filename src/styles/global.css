@@ -1,1 +1,464 @@
 @import "tailwindcss";
+
+/* =============================================
+   CYBERPUNK COLOR SYSTEM
+   ============================================= */
+@theme {
+    --color-cyber-bg: #020818;
+    --color-cyber-card: #0a1628;
+    --color-cyber-card2: #0d1f3c;
+    --color-cyber-border: #1a2d4a;
+    --color-cyber-cyan: #00d4ff;
+    --color-cyber-purple: #7c3aed;
+    --color-cyber-pink: #ff006e;
+    --color-cyber-green: #00ff88;
+    --color-text-primary: #e2e8f0;
+    --color-text-muted: #64748b;
+    --color-text-dim: #334155;
+    /* Legacy compat */
+    --color-dark-main: #020818;
+    --color-dark-card: #0a1628;
+    --color-brand-accent: #00d4ff;
+}
+
+/* =============================================
+   GOOGLE FONTS
+   ============================================= */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+/* =============================================
+   BASE RESET & TYPOGRAPHY
+   ============================================= */
+html {
+    scroll-behavior: smooth;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--color-cyber-bg);
+    color: var(--color-text-primary);
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* =============================================
+   CYBERPUNK ANIMATED BACKGROUND
+   ============================================= */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-drift 20s linear infinite;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 80% 50% at 20% -10%,
+            rgba(0, 212, 255, 0.08) 0%,
+            transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 110%,
+            rgba(124, 58, 237, 0.08) 0%,
+            transparent 60%);
+}
+
+main,
+header,
+footer,
+section {
+    position: relative;
+    z-index: 1;
+}
+
+/* =============================================
+   KEYFRAME ANIMATIONS
+   ============================================= */
+@keyframes grid-drift {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@keyframes glitch {
+
+    0%,
+    100% {
+        clip-path: none;
+        transform: translate(0);
+        text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    }
+
+    20% {
+        clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+        transform: translate(-3px, 0);
+        text-shadow: 3px 0 #ff006e, -3px 0 #00d4ff;
+    }
+
+    40% {
+        clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
+        transform: translate(3px, 0);
+        text-shadow: -3px 0 #ff006e, 3px 0 #00d4ff;
+    }
+
+    60% {
+        clip-path: none;
+        transform: translate(0);
+    }
+}
+
+@keyframes glitch-before {
+
+    0%,
+    100% {
+        clip-path: none;
+        transform: translate(0);
+        opacity: 0;
+    }
+
+    20% {
+        clip-path: polygon(0 15%, 100% 15%, 100% 40%, 0 40%);
+        transform: translate(-5px, 2px);
+        opacity: 0.7;
+    }
+
+    50% {
+        clip-path: polygon(0 55%, 100% 55%, 100% 80%, 0 80%);
+        transform: translate(5px, -2px);
+        opacity: 0.5;
+    }
+
+    75% {
+        clip-path: none;
+        opacity: 0;
+    }
+}
+
+@keyframes neon-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(0, 212, 255, 0.3), 0 0 20px rgba(0, 212, 255, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(0, 212, 255, 0.6), 0 0 40px rgba(0, 212, 255, 0.2), 0 0 80px rgba(0, 212, 255, 0.05);
+    }
+}
+
+@keyframes neon-border-scan {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink-cursor {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes progress-bar {
+    from {
+        width: 0;
+    }
+}
+
+/* =============================================
+   SCROLL PROGRESS BAR
+   ============================================= */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-cyber-cyan), var(--color-cyber-purple));
+    z-index: 9999;
+    transition: width 0.1s linear;
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.8);
+}
+
+/* =============================================
+   SECTION SCROLL OFFSET
+   ============================================= */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* =============================================
+   GLITCH TEXT EFFECT
+   ============================================= */
+.glitch {
+    position: relative;
+    animation: glitch 8s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    animation: glitch-before 8s infinite;
+}
+
+.glitch::before {
+    color: #00d4ff;
+    left: 2px;
+}
+
+.glitch::after {
+    color: #ff006e;
+    left: -2px;
+    animation-delay: 0.1s;
+}
+
+/* =============================================
+   CYBER CARD STYLES
+   ============================================= */
+.cyber-card {
+    background: var(--color-cyber-card);
+    border: 1px solid var(--color-cyber-border);
+    border-radius: 0.75rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+    border-color: rgba(0, 212, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.08), 0 0 40px rgba(0, 212, 255, 0.04);
+    transform: translateY(-2px);
+}
+
+/* =============================================
+   NEON BUTTON STYLES
+   ============================================= */
+.btn-cyber-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--color-cyber-cyan);
+    color: var(--color-cyber-cyan);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-family: "Space Grotesk", sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-cyber-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-cyber-cyan);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 0;
+}
+
+.btn-cyber-primary:hover::before {
+    transform: translateX(0);
+}
+
+.btn-cyber-primary:hover {
+    color: var(--color-cyber-bg);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.btn-cyber-primary span,
+.btn-cyber-primary svg {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-cyber-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 1px solid rgba(100, 116, 139, 0.4);
+    color: #94a3b8;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-family: "Space Grotesk", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn-cyber-secondary:hover {
+    border-color: rgba(100, 116, 139, 0.8);
+    color: #e2e8f0;
+}
+
+/* =============================================
+   NEON INPUT STYLES
+   ============================================= */
+.cyber-input {
+    width: 100%;
+    background: rgba(10, 22, 40, 0.8);
+    border: 1px solid var(--color-cyber-border);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: var(--color-text-primary);
+    font-family: "Space Grotesk", sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.cyber-input:focus {
+    border-color: var(--color-cyber-cyan);
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1), 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.cyber-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* =============================================
+   SECTION BADGE
+   ============================================= */
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    color: var(--color-cyber-cyan);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    background: rgba(0, 212, 255, 0.05);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+/* =============================================
+   TIMELINE STYLES
+   ============================================= */
+.timeline-dot {
+    position: absolute;
+    left: -2.625rem;
+    top: 0.375rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: var(--color-cyber-cyan);
+    border: 3px solid var(--color-cyber-bg);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.6), 0 0 20px rgba(0, 212, 255, 0.3);
+    animation: neon-pulse 2s ease-in-out infinite;
+}
+
+/* =============================================
+   SKILL TAG STYLES
+   ============================================= */
+.skill-tag {
+    padding: 0.25rem 0.75rem;
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    color: rgba(0, 212, 255, 0.8);
+    font-family: "JetBrains Mono", monospace;
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(0, 212, 255, 0.15);
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
+}
+
+/* =============================================
+   FADE IN UP ANIMATION (intersection observer)
+   ============================================= */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =============================================
+   MONO FONT UTILITY
+   ============================================= */
+.font-mono-cyber {
+    font-family: "JetBrains Mono", monospace;
+}

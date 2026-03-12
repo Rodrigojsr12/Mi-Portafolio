@@ -1,0 +1,16 @@
+---
+// src/components/SocialPill.astro
+interface Props {
+    href: string;
+}
+const { href } = Astro.props;
+---
+
+<a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="flex justify-center items-center gap-x-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-800 hover:bg-gray-100 hover:scale-105 transition-all shadow-sm"
+>
+    <slot />
+</a>

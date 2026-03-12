@@ -1,0 +1,203 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    tags: string[];
+    link: string;
+    badge?: string;
+}
+
+const { title, description, tags, link, badge = "Featured" } = Astro.props;
+---
+
+<article
+    class="project-card group relative flex flex-col h-full overflow-hidden rounded-xl border border-cyber-border bg-cyber-card transition-all duration-300"
+>
+    <!-- Animated neon border on hover -->
+    <div class="card-neon-border"></div>
+
+    <!-- Card Header / Visual -->
+    <div
+        class="card-header relative h-36 flex items-center justify-center overflow-hidden"
+    >
+        <!-- Animated grid lines in header -->
+        <div class="card-grid-bg absolute inset-0"></div>
+        <!-- Hex pattern decoration -->
+        <div
+            class="absolute inset-0 flex items-center justify-center opacity-10"
+        >
+            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
+                <path
+                    d="M50 10 L70 10 L80 27 L70 44 L50 44 L40 27 Z"
+                    stroke="#00d4ff"
+                    stroke-width="1"></path>
+                <path
+                    d="M30 30 L50 30 L60 47 L50 64 L30 64 L20 47 Z"
+                    stroke="#7c3aed"
+                    stroke-width="1"></path>
+                <path
+                    d="M70 30 L90 30 L100 47 L90 64 L70 64 L60 47 Z"
+                    stroke="#00d4ff"
+                    stroke-width="1"></path>
+            </svg>
+        </div>
+        <!-- Scan line animation on hover -->
+        <div class="card-scan-line"></div>
+
+        <!-- Corner decorations -->
+        <div class="corner-tl"></div>
+        <div class="corner-tr"></div>
+        <div class="corner-bl"></div>
+        <div class="corner-br"></div>
+    </div>
+
+    <!-- Card Body -->
+    <div class="p-5 flex flex-col flex-grow">
+        <div class="flex justify-between items-start mb-3">
+            <h3
+                class="text-base font-bold text-gray-100 group-hover:text-cyber-cyan transition-colors leading-tight pr-2"
+            >
+                {title}
+            </h3>
+            <span
+                class="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-cyber-cyan/10 text-cyber-cyan rounded border border-cyber-cyan/30 flex-shrink-0 font-mono-cyber"
+            >
+                {badge}
+            </span>
+        </div>
+
+        <p class="text-gray-500 mb-4 flex-grow leading-relaxed text-sm">
+            {description}
+        </p>
+
+        <div class="flex flex-wrap gap-2 mt-auto">
+            {tags.map((tag) => <span class="skill-tag">{tag}</span>)}
+        </div>
+    </div>
+
+    <!-- Full card clickable link -->
+    <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="absolute inset-0 z-20"
+        aria-label={`View ${title}`}></a>
+</article>
+
+<style>
+    .project-card {
+        background: #0a1628;
+    }
+
+    .project-card:hover {
+        border-color: rgba(0, 212, 255, 0.35);
+        transform: translateY(-4px);
+        box-shadow:
+            0 0 20px rgba(0, 212, 255, 0.08),
+            0 0 60px rgba(0, 212, 255, 0.04),
+            0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-neon-border {
+        position: absolute;
+        inset: 0;
+        border-radius: 0.75rem;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+        z-index: 1;
+        background: transparent;
+        border: 1px solid transparent;
+        background-clip: padding-box;
+    }
+
+    .project-card:hover .card-neon-border {
+        opacity: 1;
+        box-shadow: inset 0 0 20px rgba(0, 212, 255, 0.05);
+    }
+
+    .card-header {
+        background: linear-gradient(
+            135deg,
+            #0d1f3c 0%,
+            #0a1628 50%,
+            #130d2d 100%
+        );
+        border-bottom: 1px solid rgba(0, 212, 255, 0.08);
+    }
+
+    .card-grid-bg {
+        background-image:
+            linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+        background-size: 20px 20px;
+    }
+
+    .card-scan-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 212, 255, 0.6),
+            transparent
+        );
+        transform: translateY(-100%);
+        transition: transform 0s;
+        opacity: 0;
+    }
+
+    .project-card:hover .card-scan-line {
+        opacity: 1;
+        transform: translateY(300%);
+        transition:
+            transform 0.5s ease,
+            opacity 0.1s;
+    }
+
+    /* Corner decorations */
+    .corner-tl,
+    .corner-tr,
+    .corner-bl,
+    .corner-br {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-color: rgba(0, 212, 255, 0.4);
+        transition: border-color 0.3s ease;
+    }
+
+    .corner-tl {
+        top: 6px;
+        left: 6px;
+        border-top: 1px solid;
+        border-left: 1px solid;
+    }
+    .corner-tr {
+        top: 6px;
+        right: 6px;
+        border-top: 1px solid;
+        border-right: 1px solid;
+    }
+    .corner-bl {
+        bottom: 6px;
+        left: 6px;
+        border-bottom: 1px solid;
+        border-left: 1px solid;
+    }
+    .corner-br {
+        bottom: 6px;
+        right: 6px;
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+    }
+
+    .project-card:hover .corner-tl,
+    .project-card:hover .corner-tr,
+    .project-card:hover .corner-bl,
+    .project-card:hover .corner-br {
+        border-color: rgba(0, 212, 255, 0.9);
+    }
+</style>

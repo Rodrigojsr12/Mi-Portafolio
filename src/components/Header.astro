@@ -1,0 +1,316 @@
+---
+import { useTranslations, type Lang } from "../i18n/utils";
+
+interface Props {
+    lang?: Lang;
+}
+
+const { lang = "en" } = Astro.props;
+const t = useTranslations(lang);
+
+const otherLang = lang === "en" ? "es" : "en";
+const otherLangLabel = lang === "en" ? "ES" : "EN";
+---
+
+<header
+    class="flex justify-between items-center py-3 px-6 md:px-12 w-full fixed top-0 left-0 right-0 z-50"
+    id="main-header"
+>
+    <!-- Logo -->
+    <a
+        href={`/${lang}/`}
+        class="text-cyber-cyan font-bold text-xl tracking-tight font-mono-cyber hover:text-shadow-cyan transition-all"
+    >
+        &lt;RodriJSR/&gt;
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav
+        class="hidden md:flex flex-row gap-x-7 font-medium text-gray-400 text-sm"
+    >
+        <a href="#top" class="nav-link" data-section="top">{t("nav.home")}</a>
+        <a href="#sobre-mi" class="nav-link" data-section="sobre-mi"
+            >{t("nav.about")}</a
+        >
+        <a href="#habilidades" class="nav-link" data-section="habilidades"
+            >{t("nav.skills")}</a
+        >
+        <a href="#proyectos" class="nav-link" data-section="proyectos"
+            >{t("nav.projects")}</a
+        >
+        <a href="#experiencia" class="nav-link" data-section="experiencia"
+            >{t("nav.experience")}</a
+        >
+        <a href="#educacion" class="nav-link" data-section="educacion"
+            >{t("nav.education")}</a
+        >
+        <a href="#contacto" class="nav-link" data-section="contacto"
+            >{t("nav.contact")}</a
+        >
+    </nav>
+
+    <!-- Right side: Lang switcher + CTA + Hamburger -->
+    <div class="flex items-center gap-3">
+        <!-- Language Switcher -->
+        <a
+            href={`/${otherLang}/`}
+            class="hidden md:flex items-center gap-1.5 text-xs font-mono-cyber border border-cyber-border text-gray-400 hover:border-cyber-cyan hover:text-cyber-cyan transition-all px-2.5 py-1 rounded-md"
+            title={`Switch to ${otherLangLabel}`}
+        >
+            <svg
+                class="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                ></path>
+            </svg>
+            {otherLangLabel}
+        </a>
+
+        <!-- Contact CTA (desktop) -->
+        <a
+            href="#contacto"
+            class="hidden md:flex btn-cyber-primary text-sm py-2 px-4"
+        >
+            <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                ></path>
+            </svg>
+            <span>{t("nav.contactBtn")}</span>
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button
+            id="hamburger-btn"
+            class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center"
+            aria-label="Toggle menu"
+        >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div id="mobile-drawer" class="mobile-drawer-closed">
+    <nav class="flex flex-col gap-6 text-lg font-medium py-8 px-6">
+        <a href="#top" class="mobile-nav-link" onclick="closeMobileMenu()"
+            >{t("nav.home")}</a
+        >
+        <a href="#sobre-mi" class="mobile-nav-link" onclick="closeMobileMenu()"
+            >{t("nav.about")}</a
+        >
+        <a
+            href="#habilidades"
+            class="mobile-nav-link"
+            onclick="closeMobileMenu()">{t("nav.skills")}</a
+        >
+        <a href="#proyectos" class="mobile-nav-link" onclick="closeMobileMenu()"
+            >{t("nav.projects")}</a
+        >
+        <a
+            href="#experiencia"
+            class="mobile-nav-link"
+            onclick="closeMobileMenu()">{t("nav.experience")}</a
+        >
+        <a href="#educacion" class="mobile-nav-link" onclick="closeMobileMenu()"
+            >{t("nav.education")}</a
+        >
+        <a href="#contacto" class="mobile-nav-link" onclick="closeMobileMenu()"
+            >{t("nav.contact")}</a
+        >
+        <div class="pt-4 border-t border-cyber-border flex items-center gap-4">
+            <a
+                href={`/${otherLang}/`}
+                class="text-sm font-mono-cyber border border-cyber-border text-gray-400 hover:border-cyber-cyan hover:text-cyber-cyan transition-all px-3 py-1.5 rounded-md flex items-center gap-1.5"
+            >
+                <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                    ></path>
+                </svg>
+                {otherLangLabel}
+            </a>
+        </div>
+    </nav>
+</div>
+
+<style>
+    #main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(2, 8, 24, 0.92);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(0, 212, 255, 0.08);
+        z-index: 9999;
+    }
+
+    .nav-link {
+        position: relative;
+        transition: color 0.2s ease;
+        padding-bottom: 2px;
+    }
+
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--color-cyber-cyan);
+        transition: width 0.3s ease;
+        box-shadow: 0 0 6px rgba(0, 212, 255, 0.8);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--color-cyber-cyan);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
+
+    .hamburger-line {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #94a3b8;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    #hamburger-btn.open .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        background: var(--color-cyber-cyan);
+    }
+
+    #hamburger-btn.open .hamburger-line:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    #hamburger-btn.open .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        background: var(--color-cyber-cyan);
+    }
+
+    .mobile-drawer-closed {
+        position: fixed;
+        top: 57px;
+        left: 0;
+        right: 0;
+        background: rgba(2, 8, 24, 0.97);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+        z-index: 49;
+        transform: translateY(-110%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-drawer-open {
+        position: fixed;
+        top: 57px;
+        left: 0;
+        right: 0;
+        background: rgba(2, 8, 24, 0.97);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+        z-index: 49;
+        transform: translateY(0);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-nav-link {
+        color: #94a3b8;
+        transition: color 0.2s ease;
+        border-left: 2px solid transparent;
+        padding-left: 0.75rem;
+    }
+
+    .mobile-nav-link:hover {
+        color: var(--color-cyber-cyan);
+        border-left-color: var(--color-cyber-cyan);
+    }
+</style>
+
+<script>
+    // Mobile menu toggle
+    const btn = document.getElementById("hamburger-btn");
+    const drawer = document.getElementById("mobile-drawer");
+
+    function closeMobileMenu() {
+        btn?.classList.remove("open");
+        drawer?.classList.remove("mobile-drawer-open");
+        drawer?.classList.add("mobile-drawer-closed");
+    }
+
+    btn?.addEventListener("click", () => {
+        const isOpen = btn.classList.contains("open");
+        if (isOpen) {
+            closeMobileMenu();
+        } else {
+            btn.classList.add("open");
+            drawer?.classList.remove("mobile-drawer-closed");
+            drawer?.classList.add("mobile-drawer-open");
+        }
+    });
+
+    // Make closeMobileMenu available globally for onclick handlers
+    (window as any).closeMobileMenu = closeMobileMenu;
+
+    // Active nav link via IntersectionObserver
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach((link) => {
+                        link.classList.remove("active");
+                        if (
+                            link.getAttribute("data-section") ===
+                            entry.target.id
+                        ) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        },
+        { threshold: 0.4 },
+    );
+
+    sections.forEach((section) => sectionObserver.observe(section));
+</script>
