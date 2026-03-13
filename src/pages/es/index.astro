@@ -538,8 +538,8 @@ const t = useTranslations(lang);
                     <ProjectCard
                         title={t("projects.p1.title")}
                         description={t("projects.p1.desc")}
-                        tags={["Astro", "Tailwind", "UI/UX"]}
-                        link="https://github.com/tu-usuario/proyecto-1"
+                        tags={["Spring Boot", "Java", "JPA", "DDD"]}
+                        link="https://github.com/GanTrace/AgroDigital-Backend"
                         badge={t("projects.badge")}
                     />
                 </div>
@@ -547,8 +547,8 @@ const t = useTranslations(lang);
                     <ProjectCard
                         title={t("projects.p2.title")}
                         description={t("projects.p2.desc")}
-                        tags={["Finanzas", "Datos", "Excel"]}
-                        link="https://github.com/tu-usuario/proyecto-2"
+                        tags={["Angular", "TypeScript", "HTML", "CSS"]}
+                        link="https://github.com/GanTrace/AgroDigital--FrontendApp"
                         badge={t("projects.badge")}
                     />
                 </div>
@@ -556,8 +556,8 @@ const t = useTranslations(lang);
                     <ProjectCard
                         title={t("projects.p3.title")}
                         description={t("projects.p3.desc")}
-                        tags={["Matemáticas", "Algoritmia", "Python"]}
-                        link="https://github.com/tu-usuario/proyecto-3"
+                        tags={["Flutter", "Dart", "Mobile"]}
+                        link="https://github.com/VetConnect-AppMoviles/VetConnect-App-Flutter"
                         badge={t("projects.badge")}
                     />
                 </div>
@@ -565,8 +565,44 @@ const t = useTranslations(lang);
                     <ProjectCard
                         title={t("projects.p4.title")}
                         description={t("projects.p4.desc")}
-                        tags={["Investigación", "Datos"]}
-                        link="https://github.com/tu-usuario/proyecto-4"
+                        tags={["Angular", "TypeScript", "REST API"]}
+                        link="https://github.com/SkillSwap-UPC/Tutormatch-platform"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p5.title")}
+                        description={t("projects.p5.desc")}
+                        tags={["React Native", "Expo", "TypeScript"]}
+                        link="https://github.com/SkillSwap-UPC/Tutormatch-mobile"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p6.title")}
+                        description={t("projects.p6.desc")}
+                        tags={["React", "Vite", "TypeScript", "Tailwind"]}
+                        link="https://github.com/TechProtection/geoentry-landing"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p7.title")}
+                        description={t("projects.p7.desc")}
+                        tags={["Python", "Telegram API", "Bot"]}
+                        link="https://github.com/Rodrigojsr12/Bot-de-Telegram-Recordatorios"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p8.title")}
+                        description={t("projects.p8.desc")}
+                        tags={["Python", "Web Scraping", "ETL", "GUI"]}
+                        link="https://github.com/Rodrigojsr12/Web-Scraper-Libros"
                         badge={t("projects.badge")}
                     />
                 </div>
@@ -607,6 +643,91 @@ const t = useTranslations(lang);
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-tag">{t("exp.tag1")}</span>
                             <span class="skill-tag">{t("exp.tag2")}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abierto a Oportunidades -->
+                <div class="mb-10 relative animate-on-scroll">
+                    <span
+                        class="timeline-dot"
+                        style="background: #00d4ff; box-shadow: 0 0 0 4px rgba(0,212,255,0.2);"
+                    ></span>
+                    <div
+                        class="cyber-card p-6"
+                        style="border-color: rgba(0,212,255,0.3); background: rgba(0,212,255,0.03);"
+                    >
+                        <div
+                            class="flex flex-col md:flex-row md:items-center justify-between mb-2"
+                        >
+                            <h3
+                                class="text-xl font-bold text-white flex items-center gap-2"
+                            >
+                                {t("exp.open.title")}
+                            </h3>
+                            <span
+                                class="text-xs font-mono-cyber px-3 py-1 rounded-full border border-cyber-cyan/40 text-cyber-cyan bg-cyber-cyan/5 mt-1 md:mt-0 flex items-center gap-1.5"
+                            >
+                                <svg
+                                    class="w-3 h-3"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                    ></path>
+                                </svg>
+                                {t("exp.open.date")}
+                            </span>
+                        </div>
+                        <h4 class="text-cyber-cyan font-medium mb-1">
+                            {t("exp.open.company")}
+                            <span class="text-gray-500 font-normal text-sm ml-2"
+                                >• 📍 {t("exp.open.location")}</span
+                            >
+                        </h4>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-4 mt-3"
+                        >
+                            {t("exp.open.desc")}
+                        </p>
+                        <p class="text-cyber-cyan text-sm font-semibold mb-2">
+                            {t("exp.open.offerTitle")}
+                        </p>
+                        <ul class="space-y-1.5 mb-4">
+                            {
+                                [
+                                    t("exp.open.offer1"),
+                                    t("exp.open.offer2"),
+                                    t("exp.open.offer3"),
+                                    t("exp.open.offer4"),
+                                ].map((item) => (
+                                    <li class="flex items-start gap-2 text-gray-400 text-sm">
+                                        <span class="text-cyber-cyan mt-0.5">
+                                            ●
+                                        </span>
+                                        {item}
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                [
+                                    "Angular",
+                                    "React",
+                                    "Flutter",
+                                    "Spring Boot",
+                                    "Python",
+                                    "TypeScript",
+                                ].map((tag) => (
+                                    <span class="skill-tag">{tag}</span>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
@@ -744,89 +865,126 @@ const t = useTranslations(lang);
                             >{t("edu.featured")}</span
                         >
                     </div>
-                    <div class="space-y-4 mb-6">
-                        <div class="cyber-card p-5 animate-on-scroll">
-                            <div class="flex justify-between items-start mb-1">
-                                <h4 class="text-white font-bold text-sm pr-2">
-                                    {t("edu.cert1.title")}
-                                </h4>
-                                <span
-                                    class="flex items-center text-cyber-cyan border border-cyber-cyan/30 bg-cyber-cyan/5 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap gap-1 font-mono-cyber"
-                                >
-                                    <svg
-                                        class="w-3 h-3"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        ><path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path></svg
-                                    >
-                                    {t("edu.verified")}
-                                </span>
-                            </div>
-                            <div class="text-gray-500 text-xs mb-1">
-                                {t("edu.cert1.org")}
-                            </div>
-                            <div
-                                class="text-gray-600 text-xs mb-3 font-mono-cyber"
-                            >
-                                {t("edu.cert1.id")}
-                            </div>
-                            <div class="flex justify-between items-end">
-                                <span
-                                    class="text-xs text-gray-600 font-mono-cyber"
-                                    >📅 {t("edu.cert1.date")}</span
-                                >
-                                <span
-                                    class="text-[10px] px-2 py-1 bg-cyber-purple/10 text-cyber-purple rounded border border-cyber-purple/30"
-                                    >Certificación</span
-                                >
-                            </div>
-                        </div>
-                        <div class="cyber-card p-5 animate-on-scroll">
-                            <div class="flex justify-between items-start mb-1">
-                                <h4 class="text-white font-bold text-sm pr-2">
-                                    {t("edu.cert2.title")}
-                                </h4>
-                                <span
-                                    class="flex items-center text-cyber-cyan border border-cyber-cyan/30 bg-cyber-cyan/5 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap gap-1 font-mono-cyber"
-                                >
-                                    <svg
-                                        class="w-3 h-3"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        ><path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path></svg
-                                    >
-                                    {t("edu.verified")}
-                                </span>
-                            </div>
-                            <div class="text-gray-500 text-xs mb-1">
-                                {t("edu.cert2.org")}
-                            </div>
-                            <div
-                                class="text-gray-600 text-xs mb-3 font-mono-cyber"
-                            >
-                                {t("edu.cert2.id")}
-                            </div>
-                            <div class="flex justify-between items-end">
-                                <span
-                                    class="text-xs text-gray-600 font-mono-cyber"
-                                    >📅 {t("edu.cert2.date")}</span
-                                >
-                                <span
-                                    class="text-[10px] px-2 py-1 bg-cyber-purple/10 text-cyber-purple rounded border border-cyber-purple/30"
-                                    >Certificación</span
-                                >
-                            </div>
-                        </div>
+                    <div
+                        class="space-y-3 mb-6 max-h-[520px] overflow-y-auto pr-1 custom-scrollbar"
+                    >
+                        {
+                            [
+                                {
+                                    titleKey: "edu.cert1.title",
+                                    orgKey: "edu.cert1.org",
+                                    idKey: "edu.cert1.id",
+                                    dateKey: "edu.cert1.date",
+                                    linkKey: "edu.cert1.link",
+                                },
+                                {
+                                    titleKey: "edu.cert2.title",
+                                    orgKey: "edu.cert2.org",
+                                    idKey: "edu.cert2.id",
+                                    dateKey: "edu.cert2.date",
+                                    linkKey: "edu.cert2.link",
+                                },
+                                {
+                                    titleKey: "edu.cert3.title",
+                                    orgKey: "edu.cert3.org",
+                                    idKey: "edu.cert3.id",
+                                    dateKey: "edu.cert3.date",
+                                    linkKey: "edu.cert3.link",
+                                },
+                                {
+                                    titleKey: "edu.cert4.title",
+                                    orgKey: "edu.cert4.org",
+                                    idKey: "edu.cert4.id",
+                                    dateKey: "edu.cert4.date",
+                                    linkKey: "edu.cert4.link",
+                                },
+                                {
+                                    titleKey: "edu.cert5.title",
+                                    orgKey: "edu.cert5.org",
+                                    idKey: "edu.cert5.id",
+                                    dateKey: "edu.cert5.date",
+                                    linkKey: "edu.cert5.link",
+                                },
+                                {
+                                    titleKey: "edu.cert6.title",
+                                    orgKey: "edu.cert6.org",
+                                    idKey: "edu.cert6.id",
+                                    dateKey: "edu.cert6.date",
+                                    linkKey: "edu.cert6.link",
+                                },
+                                {
+                                    titleKey: "edu.cert7.title",
+                                    orgKey: "edu.cert7.org",
+                                    idKey: "edu.cert7.id",
+                                    dateKey: "edu.cert7.date",
+                                    linkKey: "edu.cert7.link",
+                                },
+                                {
+                                    titleKey: "edu.cert8.title",
+                                    orgKey: "edu.cert8.org",
+                                    idKey: "edu.cert8.id",
+                                    dateKey: "edu.cert8.date",
+                                    linkKey: "edu.cert8.link",
+                                },
+                                {
+                                    titleKey: "edu.cert9.title",
+                                    orgKey: "edu.cert9.org",
+                                    idKey: "edu.cert9.id",
+                                    dateKey: "edu.cert9.date",
+                                    linkKey: "edu.cert9.link",
+                                },
+                                {
+                                    titleKey: "edu.cert10.title",
+                                    orgKey: "edu.cert10.org",
+                                    idKey: "edu.cert10.id",
+                                    dateKey: "edu.cert10.date",
+                                    linkKey: "edu.cert10.link",
+                                },
+                            ].map((cert) => (
+                                <div class="cyber-card p-4 animate-on-scroll border-l-2 border-l-cyber-cyan/40">
+                                    <div class="flex justify-between items-start mb-1 gap-2">
+                                        <h4 class="text-white font-bold text-sm leading-tight pr-2">
+                                            {t(cert.titleKey as any)}
+                                        </h4>
+                                        <span class="flex items-center text-cyber-cyan border border-cyber-cyan/30 bg-cyber-cyan/5 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap gap-1 font-mono-cyber shrink-0">
+                                            <svg
+                                                class="w-3 h-3"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M5 13l4 4L19 7"
+                                                />
+                                            </svg>
+                                            {t("edu.verified")}
+                                        </span>
+                                    </div>
+                                    <div class="text-gray-500 text-xs mb-0.5">
+                                        {t(cert.orgKey as any)}
+                                    </div>
+                                    <div class="text-gray-600 text-xs mb-2 font-mono-cyber">
+                                        {t(cert.idKey as any)}
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xs text-gray-600 font-mono-cyber">
+                                            📅 {t(cert.dateKey as any)}
+                                        </span>
+                                        <a
+                                            href={t(cert.linkKey as any)}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="text-[10px] px-2 py-1 bg-cyber-purple/10 text-cyber-purple rounded border border-cyber-purple/30 hover:bg-cyber-purple/20 transition-colors"
+                                        >
+                                            {t("edu.viewCert")} ↗
+                                        </a>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                     <div class="cyber-card p-5 animate-on-scroll">
                         <h3
@@ -995,7 +1153,7 @@ const t = useTranslations(lang);
                                     <div
                                         class="text-gray-500 text-sm font-mono-cyber"
                                     >
-                                        rdri.dev03@gmail.com
+                                        rodrigo.jsr12@gmail.com
                                     </div>
                                 </div>
                             </div>
@@ -1101,6 +1259,22 @@ const t = useTranslations(lang);
                                         clip-rule="evenodd"></path></svg
                                 >
                             </a>
+                            <a
+                                href="https://www.instagram.com/rodrijsr1205/"
+                                target="_blank"
+                                class="flex items-center justify-center w-11 h-11 bg-cyber-bg rounded-lg border border-cyber-border text-gray-500 hover:text-pink-400 hover:border-pink-400/40 transition-all hover:shadow-[0_0_10px_rgba(236,72,153,0.2)]"
+                                aria-label="Instagram"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                                    ></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
 
@@ -1146,7 +1320,7 @@ const t = useTranslations(lang);
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                                 ></path></svg
                             >
-                            rdri.dev03@gmail.com
+                            rodrigo.jsr12@gmail.com
                         </div>
                         <div class="flex items-center gap-2">
                             <svg

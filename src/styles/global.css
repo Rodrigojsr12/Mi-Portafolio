@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
 @import "tailwindcss";
 
 /* =============================================
@@ -21,10 +22,6 @@
     --color-brand-accent: #00d4ff;
 }
 
-/* =============================================
-   GOOGLE FONTS
-   ============================================= */
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
 
 /* =============================================
    BASE RESET & TYPOGRAPHY

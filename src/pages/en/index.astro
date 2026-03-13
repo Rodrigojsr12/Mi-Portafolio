@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from "../../layouts/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import { useTranslations } from "../../i18n/utils";
@@ -7,11 +7,11 @@ const lang = "en";
 const t = useTranslations(lang);
 ---
 
-<Layout lang={lang} title="Rodrigo Salvador — Full-Stack Developer">
+<Layout lang={lang} title="Rodrigo Salvador â€” Full-Stack Developer">
     <main id="top" class="max-w-5xl mx-auto px-6 pt-16 pb-12 md:pb-20">
-        <!-- ═══════════════════════════════════════
+        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          HERO SECTION
-    ════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
         <section
             class="min-h-[88vh] flex flex-col justify-center items-center text-center mb-32 relative"
             id="hero"
@@ -168,9 +168,9 @@ const t = useTranslations(lang);
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════
+        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          ABOUT SECTION
-    ════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
         <section id="sobre-mi" class="mb-32">
             <div class="text-center mb-14 animate-on-scroll">
                 <div class="section-badge">
@@ -315,9 +315,9 @@ const t = useTranslations(lang);
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════
+        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          SKILLS SECTION
-    ════════════════════════════════════════ -->
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
         <section id="habilidades" class="mb-32">
             <div class="text-center mb-14 animate-on-scroll">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -504,7 +504,7 @@ const t = useTranslations(lang);
                         <div>
                             <div class="flex justify-between text-xs mb-1">
                                 <span class="text-gray-300 font-medium"
-                                    >🇪🇸 {t("skills.spanish")}</span
+                                    >ðŸ‡ªðŸ‡¸ {t("skills.spanish")}</span
                                 >
                                 <span class="text-cyber-cyan/80 font-mono-cyber"
                                     >{t("skills.native")}</span
@@ -523,7 +523,7 @@ const t = useTranslations(lang);
                         <div>
                             <div class="flex justify-between text-xs mb-1">
                                 <span class="text-gray-300 font-medium"
-                                    >🇺🇸 {t("skills.english")}</span
+                                    >ðŸ‡ºðŸ‡¸ {t("skills.english")}</span
                                 >
                                 <span class="text-cyber-cyan/80 font-mono-cyber"
                                     >{t("skills.englishLevel")}</span
@@ -546,134 +546,160 @@ const t = useTranslations(lang);
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- ═══════════════════════════════════════
+        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          PROJECTS SECTION
-    ════════════════════════════════════════ -->
-                <section id="proyectos" class="mb-32">
-                    <div class="text-center mb-14 animate-on-scroll">
-                        <h2
-                            class="text-3xl md:text-4xl font-bold text-white mb-4"
-                        >
-                            {t("projects.heading")}
-                        </h2>
-                        <p class="text-gray-500">{t("projects.subheading")}</p>
-                    </div>
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+        <section id="proyectos" class="mb-32">
+            <div class="text-center mb-14 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    {t("projects.heading")}
+                </h2>
+                <p class="text-gray-500">{t("projects.subheading")}</p>
+            </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <div class="animate-on-scroll">
-                            <ProjectCard
-                                title={t("projects.p1.title")}
-                                description={t("projects.p1.desc")}
-                                tags={["Astro", "Tailwind", "UI/UX"]}
-                                link="https://github.com/tu-usuario/proyecto-1"
-                                badge={t("projects.badge")}
-                            />
-                        </div>
-                        <div class="animate-on-scroll">
-                            <ProjectCard
-                                title={t("projects.p2.title")}
-                                description={t("projects.p2.desc")}
-                                tags={["Finance", "Data", "Excel"]}
-                                link="https://github.com/tu-usuario/proyecto-2"
-                                badge={t("projects.badge")}
-                            />
-                        </div>
-                        <div class="animate-on-scroll">
-                            <ProjectCard
-                                title={t("projects.p3.title")}
-                                description={t("projects.p3.desc")}
-                                tags={["Math", "Algorithms", "Python"]}
-                                link="https://github.com/tu-usuario/proyecto-3"
-                                badge={t("projects.badge")}
-                            />
-                        </div>
-                        <div class="animate-on-scroll">
-                            <ProjectCard
-                                title={t("projects.p4.title")}
-                                description={t("projects.p4.desc")}
-                                tags={["Research", "Data"]}
-                                link="https://github.com/tu-usuario/proyecto-4"
-                                badge={t("projects.badge")}
-                            />
-                        </div>
-                    </div>
-                </section>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p1.title")}
+                        description={t("projects.p1.desc")}
+                        tags={["Spring Boot", "Java", "JPA", "DDD"]}
+                        link="https://github.com/GanTrace/AgroDigital-Backend"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p2.title")}
+                        description={t("projects.p2.desc")}
+                        tags={["Angular", "TypeScript", "HTML", "CSS"]}
+                        link="https://github.com/GanTrace/AgroDigital--FrontendApp"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p3.title")}
+                        description={t("projects.p3.desc")}
+                        tags={["Flutter", "Dart", "Mobile"]}
+                        link="https://github.com/VetConnect-AppMoviles/VetConnect-App-Flutter"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p4.title")}
+                        description={t("projects.p4.desc")}
+                        tags={["Angular", "TypeScript", "REST API"]}
+                        link="https://github.com/SkillSwap-UPC/Tutormatch-platform"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p5.title")}
+                        description={t("projects.p5.desc")}
+                        tags={["React Native", "Expo", "TypeScript"]}
+                        link="https://github.com/SkillSwap-UPC/Tutormatch-mobile"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p6.title")}
+                        description={t("projects.p6.desc")}
+                        tags={["React", "Vite", "TypeScript", "Tailwind"]}
+                        link="https://github.com/TechProtection/geoentry-landing"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p7.title")}
+                        description={t("projects.p7.desc")}
+                        tags={["Python", "Telegram API", "Bot"]}
+                        link="https://github.com/Rodrigojsr12/Bot-de-Telegram-Recordatorios"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+                <div class="animate-on-scroll">
+                    <ProjectCard
+                        title={t("projects.p8.title")}
+                        description={t("projects.p8.desc")}
+                        tags={["Python", "Web Scraping", "ETL", "GUI"]}
+                        link="https://github.com/Rodrigojsr12/Web-Scraper-Libros"
+                        badge={t("projects.badge")}
+                    />
+                </div>
+            </div>
+        </section>
 
-                <!-- ═══════════════════════════════════════
+        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          EXPERIENCE SECTION
-    ════════════════════════════════════════ -->
-                <section id="experiencia" class="mb-32">
-                    <div class="text-center mb-14 animate-on-scroll">
-                        <h2
-                            class="text-3xl md:text-4xl font-bold text-white mb-4"
-                        >
-                            {t("exp.heading")}
-                        </h2>
-                        <p class="text-gray-500">{t("exp.subheading")}</p>
-                    </div>
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+        <section id="experiencia" class="mb-32">
+            <div class="text-center mb-14 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    {t("exp.heading")}
+                </h2>
+                <p class="text-gray-500">{t("exp.subheading")}</p>
+            </div>
 
-                    <div
-                        class="max-w-3xl mx-auto border-l border-cyber-border pl-10 relative"
-                    >
-                        <div class="mb-10 relative animate-on-scroll">
-                            <span class="timeline-dot"></span>
-                            <div class="cyber-card p-6">
-                                <div
-                                    class="flex flex-col md:flex-row md:items-center justify-between mb-2"
-                                >
-                                    <h3 class="text-xl font-bold text-white">
-                                        {t("exp.role")}
-                                    </h3>
-                                    <span
-                                        class="text-sm text-cyber-cyan font-mono-cyber mt-1 md:mt-0"
-                                        >{t("exp.date")}</span
-                                    >
-                                </div>
-                                <h4 class="text-gray-500 font-medium mb-4">
-                                    {t("exp.company")}
-                                </h4>
-                                <p
-                                    class="text-gray-400 text-sm leading-relaxed mb-4"
-                                >
-                                    {t("exp.desc")}
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="skill-tag"
-                                        >{t("exp.tag1")}</span
-                                    >
-                                    <span class="skill-tag"
-                                        >{t("exp.tag2")}</span
-                                    >
-                                </div>
-                            </div>
+            <div
+                class="max-w-3xl mx-auto border-l border-cyber-border pl-10 relative"
+            >
+                <div class="mb-10 relative animate-on-scroll">
+                    <span class="timeline-dot"></span>
+                    <div class="cyber-card p-6">
+                        <div
+                            class="flex flex-col md:flex-row md:items-center justify-between mb-2"
+                        >
+                            <h3 class="text-xl font-bold text-white">
+                                {t("exp.role")}
+                            </h3>
+                            <span
+                                class="text-sm text-cyber-cyan font-mono-cyber mt-1 md:mt-0"
+                                >{t("exp.date")}</span
+                            >
+                        </div>
+                        <h4 class="text-gray-500 font-medium mb-4">
+                            {t("exp.company")}
+                        </h4>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            {t("exp.desc")}
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">{t("exp.tag1")}</span>
+                            <span class="skill-tag">{t("exp.tag2")}</span>
                         </div>
                     </div>
-                </section>
+                </div>
 
-                <!-- ═══════════════════════════════════════
-         EDUCATION & CERTS SECTION
-    ════════════════════════════════════════ -->
-                <section id="educacion" class="mb-32">
-                    <div class="text-center mb-14 animate-on-scroll">
-                        <h2
-                            class="text-3xl md:text-4xl font-bold text-white mb-4"
+                <!-- Open to Opportunities card -->
+                <div class="mb-10 relative animate-on-scroll">
+                    <span
+                        class="timeline-dot"
+                        style="background: #00d4ff; box-shadow: 0 0 0 4px rgba(0,212,255,0.2);"
+                    ></span>
+                    <div
+                        class="cyber-card p-6"
+                        style="border-color: rgba(0,212,255,0.3); background: rgba(0,212,255,0.03);"
+                    >
+                        <div
+                            class="flex flex-col md:flex-row md:items-center justify-between mb-2"
                         >
-                            {t("edu.heading")}
-                        </h2>
-                        <p class="text-gray-500 max-w-xl mx-auto">
-                            {t("edu.subheading")}
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <!-- Education -->
-                        <div>
                             <h3
-                                class="text-lg font-bold text-white mb-5 flex items-center gap-2"
+                                class="text-xl font-bold text-white flex items-center gap-2"
+                            >
+                                {t("exp.open.title")}
+                            </h3>
+                            <span
+                                class="text-xs font-mono-cyber px-3 py-1 rounded-full border border-cyber-cyan/40 text-cyber-cyan bg-cyber-cyan/5 mt-1 md:mt-0 flex items-center gap-1.5"
                             >
                                 <svg
-                                    class="w-5 h-5 text-cyber-cyan"
+                                    class="w-3 h-3"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -682,571 +708,482 @@ const t = useTranslations(lang);
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                         stroke-width="2"
-                                        d="M12 14l9-5-9-5-9 5 9 5z"></path><path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                                     ></path>
                                 </svg>
-                                {t("edu.title.edu")}
-                            </h3>
-                            <div class="space-y-4">
-                                <!-- Software Engineering -->
-                                <div
-                                    class="cyber-card p-6 animate-on-scroll"
-                                    style="border-color: rgba(0,212,255,0.2);"
-                                >
-                                    <div
-                                        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 gap-2"
-                                    >
-                                        <h4 class="text-white font-bold">
-                                            {t("edu.degree")}
-                                        </h4>
-                                        <span
-                                            class="text-xs px-3 py-1 bg-cyber-cyan/10 text-cyber-cyan rounded-full border border-cyber-cyan/30 whitespace-nowrap font-mono-cyber"
-                                        >
-                                            {t("edu.inProgress")}
-                                        </span>
-                                    </div>
-                                    <div
-                                        class="text-cyber-cyan font-medium text-sm mb-3"
-                                    >
-                                        {t("edu.university")}
-                                    </div>
-                                    <div
-                                        class="text-xs text-gray-600 mb-3 flex gap-4 font-mono-cyber"
-                                    >
-                                        <span>📍 {t("edu.location")}</span>
-                                        <span>📅 {t("edu.period")}</span>
-                                    </div>
-                                    <p class="text-sm text-gray-500 mb-3">
-                                        {t("edu.degreeDesc")}
-                                    </p>
-                                    <div class="flex flex-wrap gap-2">
-                                        {
-                                            [
-                                                "TypeScript",
-                                                "Docker",
-                                                "JavaScript",
-                                                "React",
-                                                "Node.js",
-                                            ].map((tech) => (
-                                                <span class="skill-tag">
-                                                    {tech}
-                                                </span>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
-
-                                <!-- English Certificate -->
-                                <div class="cyber-card p-6 animate-on-scroll">
-                                    <div
-                                        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 gap-2"
-                                    >
-                                        <h4 class="text-white font-bold">
-                                            {t("edu.eng.title")}
-                                        </h4>
-                                        <span
-                                            class="text-xs px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/30 whitespace-nowrap"
-                                        >
-                                            {t("edu.completed")}
-                                        </span>
-                                    </div>
-                                    <div
-                                        class="text-cyber-cyan font-medium text-sm mb-3"
-                                    >
-                                        {t("edu.eng.org")}
-                                    </div>
-                                    <div
-                                        class="text-xs text-gray-600 mb-3 font-mono-cyber"
-                                    >
-                                        📅 {t("edu.eng.date")}
-                                    </div>
-                                    <p class="text-sm text-gray-500">
-                                        {t("edu.eng.desc")}
-                                    </p>
-                                </div>
-                            </div>
+                                {t("exp.open.date")}
+                            </span>
                         </div>
-
-                        <!-- Certifications -->
-                        <div>
-                            <div class="flex justify-between items-center mb-5">
-                                <h3
-                                    class="text-lg font-bold text-white flex items-center gap-2"
-                                >
-                                    <svg
-                                        class="w-5 h-5 text-cyber-purple"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                                        ></path>
-                                    </svg>
-                                    {t("edu.title.certs")}
-                                </h3>
-                                <span class="text-xs text-gray-600"
-                                    >{t("edu.featured")}</span
-                                >
-                            </div>
-
-                            <div class="space-y-4 mb-6">
-                                <!-- Cert 1 -->
-                                <div class="cyber-card p-5 animate-on-scroll">
-                                    <div
-                                        class="flex justify-between items-start mb-1"
-                                    >
-                                        <h4
-                                            class="text-white font-bold text-sm pr-2"
-                                        >
-                                            {t("edu.cert1.title")}
-                                        </h4>
-                                        <span
-                                            class="flex items-center text-cyber-cyan border border-cyber-cyan/30 bg-cyber-cyan/5 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap gap-1 font-mono-cyber"
-                                        >
-                                            <svg
-                                                class="w-3 h-3"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M5 13l4 4L19 7"></path>
-                                            </svg>
-                                            {t("edu.verified")}
-                                        </span>
-                                    </div>
-                                    <div
-                                        class="text-gray-500 text-xs mb-1 ml-0"
-                                    >
-                                        {t("edu.cert1.org")}
-                                    </div>
-                                    <div
-                                        class="text-gray-600 text-xs mb-3 font-mono-cyber"
-                                    >
-                                        {t("edu.cert1.id")}
-                                    </div>
-                                    <div class="flex justify-between items-end">
-                                        <span
-                                            class="text-xs text-gray-600 font-mono-cyber"
-                                            >📅 {t("edu.cert1.date")}</span
-                                        >
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-cyber-purple/10 text-cyber-purple rounded border border-cyber-purple/30"
-                                            >Certification</span
-                                        >
-                                    </div>
-                                </div>
-
-                                <!-- Cert 2 -->
-                                <div class="cyber-card p-5 animate-on-scroll">
-                                    <div
-                                        class="flex justify-between items-start mb-1"
-                                    >
-                                        <h4
-                                            class="text-white font-bold text-sm pr-2"
-                                        >
-                                            {t("edu.cert2.title")}
-                                        </h4>
-                                        <span
-                                            class="flex items-center text-cyber-cyan border border-cyber-cyan/30 bg-cyber-cyan/5 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap gap-1 font-mono-cyber"
-                                        >
-                                            <svg
-                                                class="w-3 h-3"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M5 13l4 4L19 7"></path>
-                                            </svg>
-                                            {t("edu.verified")}
-                                        </span>
-                                    </div>
-                                    <div class="text-gray-500 text-xs mb-1">
-                                        {t("edu.cert2.org")}
-                                    </div>
-                                    <div
-                                        class="text-gray-600 text-xs mb-3 font-mono-cyber"
-                                    >
-                                        {t("edu.cert2.id")}
-                                    </div>
-                                    <div class="flex justify-between items-end">
-                                        <span
-                                            class="text-xs text-gray-600 font-mono-cyber"
-                                            >📅 {t("edu.cert2.date")}</span
-                                        >
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-cyber-purple/10 text-cyber-purple rounded border border-cyber-purple/30"
-                                            >Certification</span
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Spec Areas -->
-                            <div class="cyber-card p-5 animate-on-scroll">
-                                <h3
-                                    class="text-white font-bold mb-4 flex items-center gap-2 text-sm"
-                                >
-                                    <svg
-                                        class="w-4 h-4 text-cyber-cyan"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                                        ></path>
-                                    </svg>
-                                    {t("edu.specialization")}
-                                </h3>
-                                <div class="flex flex-wrap gap-2">
-                                    {
-                                        [
-                                            t("edu.spec1"),
-                                            t("edu.spec2"),
-                                            t("edu.spec3"),
-                                            t("edu.spec4"),
-                                            t("edu.spec5"),
-                                        ].map((spec) => (
-                                            <span class="skill-tag">
-                                                {spec}
-                                            </span>
-                                        ))
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ═══════════════════════════════════════
-         CONTACT SECTION
-    ════════════════════════════════════════ -->
-                <section id="contacto" class="mb-24">
-                    <div class="text-center mb-14 animate-on-scroll">
-                        <h2
-                            class="text-4xl md:text-5xl font-bold text-white mb-4"
+                        <h4 class="text-cyber-cyan font-medium mb-1">
+                            {t("exp.open.company")}
+                            <span class="text-gray-500 font-normal text-sm ml-2"
+                                >â€¢ ðŸ“ {t("exp.open.location")}</span
+                            >
+                        </h4>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-4 mt-3"
                         >
-                            {t("contact.heading")}
-                        </h2>
-                        <p class="text-gray-500 max-w-xl mx-auto">
-                            {t("contact.subheading")}
+                            {t("exp.open.desc")}
                         </p>
+                        <p class="text-cyber-cyan text-sm font-semibold mb-2">
+                            {t("exp.open.offerTitle")}
+                        </p>
+                        <ul class="space-y-1.5 mb-4">
+                            {
+                                [
+                                    t("exp.open.offer1"),
+                                    t("exp.open.offer2"),
+                                    t("exp.open.offer3"),
+                                    t("exp.open.offer4"),
+                                ].map((item) => (
+                                    <li class="flex items-start gap-2 text-gray-400 text-sm">
+                                        <span class="text-cyber-cyan mt-0.5">
+                                            â—
+                                        </span>
+                                        {item}
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                [
+                                    "Angular",
+                                    "React",
+                                    "Flutter",
+                                    "Spring Boot",
+                                    "Python",
+                                    "TypeScript",
+                                ].map((tag) => (
+                                    <span class="skill-tag">{tag}</span>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+         EDUCATION & CERTS SECTION
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+        <section id="educacion" class="mb-32">
+            <div class="text-center mb-14 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    {t("edu.heading")}
+                </h2>
+                <p class="text-gray-500 max-w-xl mx-auto">
+                    {t("edu.subheading")}
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Education -->
+                <div>
+                    <h3
+                        class="text-lg font-bold text-white mb-5 flex items-center gap-2"
+                    >
+                        <svg
+                            class="w-5 h-5 text-cyber-cyan"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 14l9-5-9-5-9 5 9 5z"></path><path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                            ></path>
+                        </svg>
+                        {t("edu.title.edu")}
+                    </h3>
+                    <div class="space-y-4">
+                        <!-- Software Engineering -->
+                        <div
+                            class="cyber-card p-6 animate-on-scroll"
+                            style="border-color: rgba(0,212,255,0.2);"
+                        >
+                            <div
+                                class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 gap-2"
+                            >
+                                <h4 class="text-white font-bold">
+                                    {t("edu.degree")}
+                                </h4>
+                                <span
+                                    class="text-xs px-3 py-1 bg-cyber-cyan/10 text-cyber-cyan rounded-full border border-cyber-cyan/30 whitespace-nowrap font-mono-cyber"
+                                >
+                                    {t("edu.inProgress")}
+                                </span>
+                            </div>
+                            <div
+                                class="text-cyber-cyan font-medium text-sm mb-3"
+                            >
+                                {t("edu.university")}
+                            </div>
+                            <div
+                                class="text-xs text-gray-600 mb-3 flex gap-4 font-mono-cyber"
+                            >
+                                <span>ðŸ“ {t("edu.location")}</span>
+                                <span>ðŸ“… {t("edu.period")}</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-3">
+                                {t("edu.degreeDesc")}
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                {
+                                    [
+                                        "TypeScript",
+                                        "Docker",
+                                        "JavaScript",
+                                        "React",
+                                        "Node.js",
+                                    ].map((tech) => (
+                                        <span class="skill-tag">{tech}</span>
+                                    ))
+                                }
+                            </div>
+                        </div>
+
+                        <!-- English Certificate -->
+                        <div class="cyber-card p-6 animate-on-scroll">
+                            <div
+                                class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 gap-2"
+                            >
+                                <h4 class="text-white font-bold">
+                                    {t("edu.eng.title")}
+                                </h4>
+                                <span
+                                    class="text-xs px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/30 whitespace-nowrap"
+                                >
+                                    {t("edu.completed")}
+                                </span>
+                            </div>
+                            <div
+                                class="text-cyber-cyan font-medium text-sm mb-3"
+                            >
+                                {t("edu.eng.org")}
+                            </div>
+                            <div
+                                class="text-xs text-gray-600 mb-3 font-mono-cyber"
+                            >
+                                ðŸ“… {t("edu.eng.date")}
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                {t("edu.eng.desc")}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div>
+                    <div class="flex justify-between items-center mb-5">
+                        <h3
+                            class="text-lg font-bold text-white flex items-center gap-2"
+                        >
+                            <svg
+                                class="w-5 h-5 text-cyber-purple"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                ></path>
+                            </svg>
+                            {t("edu.title.certs")}
+                        </h3>
+                        <span class="text-xs text-gray-600"
+                            >{t("edu.featured")}</span
+                        >
                     </div>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <!-- Form -->
-                        <div class="cyber-card p-6 md:p-8 animate-on-scroll">
-                            <h3 class="text-xl font-bold text-white mb-2">
-                                {t("contact.form.title")}
-                            </h3>
-                            <p class="text-gray-500 text-sm mb-7">
-                                {t("contact.form.subtitle")}
-                            </p>
+                    <div
+                        class="space-y-3 mb-6 max-h-[520px] overflow-y-auto pr-1 custom-scrollbar"
+                    >
+                        {
+                            [
+                                {
+                                    titleKey: "edu.cert1.title",
+                                    orgKey: "edu.cert1.org",
+                                    idKey: "edu.cert1.id",
+                                    dateKey: "edu.cert1.date",
+                                    linkKey: "edu.cert1.link",
+                                },
+                                {
+                                    titleKey: "edu.cert2.title",
+                                    orgKey: "edu.cert2.org",
+                                    idKey: "edu.cert2.id",
+                                    dateKey: "edu.cert2.date",
+                                    linkKey: "edu.cert2.link",
+                                },
+                                {
+                                    titleKey: "edu.cert3.title",
+                                    orgKey: "edu.cert3.org",
+                                    idKey: "edu.cert3.id",
+                                    dateKey: "edu.cert3.date",
+                                    linkKey: "edu.cert3.link",
+                                },
+                                {
+                                    titleKey: "edu.cert4.title",
+                                    orgKey: "edu.cert4.org",
+                                    idKey: "edu.cert4.id",
+                                    dateKey: "edu.cert4.date",
+                                    linkKey: "edu.cert4.link",
+                                },
+                                {
+                                    titleKey: "edu.cert5.title",
+                                    orgKey: "edu.cert5.org",
+                                    idKey: "edu.cert5.id",
+                                    dateKey: "edu.cert5.date",
+                                    linkKey: "edu.cert5.link",
+                                },
+                                {
+                                    titleKey: "edu.cert6.title",
+                                    orgKey: "edu.cert6.org",
+                                    idKey: "edu.cert6.id",
+                                    dateKey: "edu.cert6.date",
+                                    linkKey: "edu.cert6.link",
+                                },
+                                {
+                                    titleKey: "edu.cert7.title",
+                                    orgKey: "edu.cert7.org",
+                                    idKey: "edu.cert7.id",
+                                    dateKey: "edu.cert7.date",
+                                    linkKey: "edu.cert7.link",
+                                },
+                                {
+                                    titleKey: "edu.cert8.title",
+                                    orgKey: "edu.cert8.org",
+                                    idKey: "edu.cert8.id",
+                                    dateKey: "edu.cert8.date",
+                                    linkKey: "edu.cert8.link",
+                                },
+                                {
+                                    titleKey: "edu.cert9.title",
+                                    orgKey: "edu.cert9.org",
+                                    idKey: "edu.cert9.id",
+                                    dateKey: "edu.cert9.date",
+                                    linkKey: "edu.cert9.link",
+                                },
+                                {
+                                    titleKey: "edu.cert10.title",
+                                    orgKey: "edu.cert10.org",
+                                    idKey: "edu.cert10.id",
+                                    dateKey: "edu.cert10.date",
+                                    linkKey: "edu.cert10.link",
+                                },
+                            ].map((cert) => (
+                                <div class="cyber-card p-4 animate-on-scroll border-l-2 border-l-cyber-cyan/40">
+                                    <div class="flex justify-between items-start mb-1 gap-2">
+                                        <h4 class="text-white font-bold text-sm leading-tight pr-2">
+                                            {t(cert.titleKey as any)}
+                                        </h4>
+                                        <span class="flex items-center text-cyber-cyan border border-cyber-cyan/30 bg-cyber-cyan/5 rounded-full px-2 py-0.5 text-[10px] whitespace-nowrap gap-1 font-mono-cyber shrink-0">
+                                            <svg
+                                                class="w-3 h-3"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M5 13l4 4L19 7"
+                                                />
+                                            </svg>
+                                            {t("edu.verified")}
+                                        </span>
+                                    </div>
+                                    <div class="text-gray-500 text-xs mb-0.5">
+                                        {t(cert.orgKey as any)}
+                                    </div>
+                                    <div class="text-gray-600 text-xs mb-2 font-mono-cyber">
+                                        {t(cert.idKey as any)}
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xs text-gray-600 font-mono-cyber">
+                                            📅 {t(cert.dateKey as any)}
+                                        </span>
+                                        <a
+                                            href={t(cert.linkKey as any)}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="text-[10px] px-2 py-1 bg-cyber-purple/10 text-cyber-purple rounded border border-cyber-purple/30 hover:bg-cyber-purple/20 transition-colors"
+                                        >
+                                            {t("edu.viewCert")} ↗
+                                        </a>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
 
-                            <form
-                                class="space-y-5"
-                                onsubmit="event.preventDefault();"
+                    <!-- Spec Areas -->
+                    <div class="cyber-card p-5 animate-on-scroll">
+                        <h3
+                            class="text-white font-bold mb-4 flex items-center gap-2 text-sm"
+                        >
+                            <svg
+                                class="w-4 h-4 text-cyber-cyan"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
                             >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                                ></path>
+                            </svg>
+                            {t("edu.specialization")}
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                [
+                                    t("edu.spec1"),
+                                    t("edu.spec2"),
+                                    t("edu.spec3"),
+                                    t("edu.spec4"),
+                                    t("edu.spec5"),
+                                ].map((spec) => (
+                                    <span class="skill-tag">{spec}</span>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+         CONTACT SECTION
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+        <section id="contacto" class="mb-24">
+            <div class="text-center mb-14 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                    {t("contact.heading")}
+                </h2>
+                <p class="text-gray-500 max-w-xl mx-auto">
+                    {t("contact.subheading")}
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Form -->
+                <div class="cyber-card p-6 md:p-8 animate-on-scroll">
+                    <h3 class="text-xl font-bold text-white mb-2">
+                        {t("contact.form.title")}
+                    </h3>
+                    <p class="text-gray-500 text-sm mb-7">
+                        {t("contact.form.subtitle")}
+                    </p>
+
+                    <form class="space-y-5" onsubmit="event.preventDefault();">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-400 mb-1.5"
+                                >
+                                    {t("contact.form.name")}
+                                    <span class="text-cyber-cyan">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    placeholder={t("contact.form.namePh")}
+                                    class="cyber-input"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-400 mb-1.5"
+                                >
+                                    {t("contact.form.email")}
+                                    <span class="text-cyber-cyan">*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    placeholder="email@example.com"
+                                    class="cyber-input"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-400 mb-1.5"
+                            >
+                                {t("contact.form.subject")}
+                                <span class="text-cyber-cyan">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                placeholder={t("contact.form.subjectPh")}
+                                class="cyber-input"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-400 mb-1.5"
+                            >
+                                {t("contact.form.message")}
+                                <span class="text-cyber-cyan">*</span>
+                            </label>
+                            <textarea
+                                rows={4}
+                                placeholder={t("contact.form.messagePh")}
+                                class="cyber-input resize-none"
+                                required></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn-cyber-primary w-full justify-center py-3.5 text-base"
+                        >
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                            <span>{t("contact.form.submit")}</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div class="cyber-card p-6 md:p-8 animate-on-scroll">
+                        <h3 class="text-lg font-bold text-white mb-2">
+                            {t("contact.info.title")}
+                        </h3>
+                        <p class="text-gray-500 text-sm mb-6">
+                            {t("contact.info.subtitle")}
+                        </p>
+                        <div class="space-y-5">
+                            <div class="flex items-center gap-4">
                                 <div
-                                    class="grid grid-cols-1 md:grid-cols-2 gap-5"
-                                >
-                                    <div>
-                                        <label
-                                            class="block text-sm font-medium text-gray-400 mb-1.5"
-                                        >
-                                            {t("contact.form.name")}
-                                            <span class="text-cyber-cyan"
-                                                >*</span
-                                            >
-                                        </label>
-                                        <input
-                                            type="text"
-                                            placeholder={t(
-                                                "contact.form.namePh",
-                                            )}
-                                            class="cyber-input"
-                                            required
-                                        />
-                                    </div>
-                                    <div>
-                                        <label
-                                            class="block text-sm font-medium text-gray-400 mb-1.5"
-                                        >
-                                            {t("contact.form.email")}
-                                            <span class="text-cyber-cyan"
-                                                >*</span
-                                            >
-                                        </label>
-                                        <input
-                                            type="email"
-                                            placeholder="email@example.com"
-                                            class="cyber-input"
-                                            required
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label
-                                        class="block text-sm font-medium text-gray-400 mb-1.5"
-                                    >
-                                        {t("contact.form.subject")}
-                                        <span class="text-cyber-cyan">*</span>
-                                    </label>
-                                    <input
-                                        type="text"
-                                        placeholder={t(
-                                            "contact.form.subjectPh",
-                                        )}
-                                        class="cyber-input"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <label
-                                        class="block text-sm font-medium text-gray-400 mb-1.5"
-                                    >
-                                        {t("contact.form.message")}
-                                        <span class="text-cyber-cyan">*</span>
-                                    </label>
-                                    <textarea
-                                        rows={4}
-                                        placeholder={t(
-                                            "contact.form.messagePh",
-                                        )}
-                                        class="cyber-input resize-none"
-                                        required></textarea>
-                                </div>
-                                <button
-                                    type="submit"
-                                    class="btn-cyber-primary w-full justify-center py-3.5 text-base"
+                                    class="flex items-center justify-center w-9 h-9 rounded-lg bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/20 flex-shrink-0"
                                 >
                                     <svg
-                                        class="w-5 h-5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                                        ></path>
-                                    </svg>
-                                    <span>{t("contact.form.submit")}</span>
-                                </button>
-                            </form>
-                        </div>
-
-                        <!-- Contact Info -->
-                        <div class="space-y-6">
-                            <div
-                                class="cyber-card p-6 md:p-8 animate-on-scroll"
-                            >
-                                <h3 class="text-lg font-bold text-white mb-2">
-                                    {t("contact.info.title")}
-                                </h3>
-                                <p class="text-gray-500 text-sm mb-6">
-                                    {t("contact.info.subtitle")}
-                                </p>
-                                <div class="space-y-5">
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="flex items-center justify-center w-9 h-9 rounded-lg bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/20 flex-shrink-0"
-                                        >
-                                            <svg
-                                                class="w-4 h-4"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                                ></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div
-                                                class="text-white font-medium text-sm mb-0.5"
-                                            >
-                                                {t("contact.info.email")}
-                                            </div>
-                                            <div
-                                                class="text-gray-500 text-sm font-mono-cyber"
-                                            >
-                                                rdri.dev03@gmail.com
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="flex items-center justify-center w-9 h-9 rounded-lg bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/20 flex-shrink-0"
-                                        >
-                                            <svg
-                                                class="w-4 h-4"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"
-                                                ></path><path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                                                ></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div
-                                                class="text-white font-medium text-sm mb-0.5"
-                                            >
-                                                {t("contact.info.location")}
-                                            </div>
-                                            <div class="text-gray-500 text-sm">
-                                                Lima, Perú
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="flex items-center justify-center w-9 h-9 rounded-lg bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/20 flex-shrink-0"
-                                        >
-                                            <svg
-                                                class="w-4 h-4"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                                ></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div
-                                                class="text-white font-medium text-sm mb-0.5"
-                                            >
-                                                {t("contact.info.response")}
-                                            </div>
-                                            <div class="text-gray-500 text-sm">
-                                                {t("contact.info.responseVal")}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="cyber-card p-6 md:p-8 animate-on-scroll"
-                            >
-                                <h3 class="text-lg font-bold text-white mb-2">
-                                    {t("contact.social.title")}
-                                </h3>
-                                <p class="text-gray-500 text-sm mb-5">
-                                    {t("contact.social.subtitle")}
-                                </p>
-                                <div class="flex gap-4">
-                                    <a
-                                        href="https://github.com/Rodrigojsr12"
-                                        target="_blank"
-                                        class="flex items-center justify-center w-11 h-11 bg-cyber-bg rounded-lg border border-cyber-border text-gray-500 hover:text-cyber-cyan hover:border-cyber-cyan/40 transition-all hover:shadow-[0_0_10px_rgba(0,212,255,0.2)]"
-                                    >
-                                        <svg
-                                            class="w-5 h-5"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </a>
-                                    <a
-                                        href="https://www.linkedin.com/in/rodrigojsr12/"
-                                        target="_blank"
-                                        class="flex items-center justify-center w-11 h-11 bg-cyber-bg rounded-lg border border-cyber-border text-gray-500 hover:text-cyber-cyan hover:border-cyber-cyan/40 transition-all hover:shadow-[0_0_10px_rgba(0,212,255,0.2)]"
-                                    >
-                                        <svg
-                                            class="w-5 h-5"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Available for work -->
-                            <div
-                                class="flex items-center gap-3 px-5 py-3 cyber-card border-cyber-cyan/20 animate-on-scroll"
-                            >
-                                <span
-                                    class="w-2.5 h-2.5 rounded-full bg-cyber-green animate-pulse flex-shrink-0"
-                                ></span>
-                                <span
-                                    class="text-cyber-cyan text-sm font-medium"
-                                    >{t("contact.available")}</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ═══════════════════════════════════════
-         FOOTER
-    ════════════════════════════════════════ -->
-                <footer class="border-t border-cyber-border mt-20 pt-12 pb-8">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-                        <div class="md:col-span-1">
-                            <div
-                                class="text-cyber-cyan font-bold text-xl tracking-tight mb-4 font-mono-cyber"
-                            >
-                                &lt;RodriJSR/&gt;
-                            </div>
-                            <p class="text-gray-500 text-sm mb-5 max-w-sm">
-                                {t("footer.desc")}
-                            </p>
-                            <div
-                                class="text-gray-600 text-sm space-y-2 font-mono-cyber"
-                            >
-                                <div class="flex items-center gap-2">
-                                    <svg
-                                        class="w-4 h-4 text-cyber-cyan"
+                                        class="w-4 h-4"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -1258,11 +1195,26 @@ const t = useTranslations(lang);
                                             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                                         ></path>
                                     </svg>
-                                    rdri.dev03@gmail.com
                                 </div>
-                                <div class="flex items-center gap-2">
+                                <div>
+                                    <div
+                                        class="text-white font-medium text-sm mb-0.5"
+                                    >
+                                        {t("contact.info.email")}
+                                    </div>
+                                    <div
+                                        class="text-gray-500 text-sm font-mono-cyber"
+                                    >
+                                        rodrigo.jsr12@gmail.com
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="flex items-center justify-center w-9 h-9 rounded-lg bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/20 flex-shrink-0"
+                                >
                                     <svg
-                                        class="w-4 h-4 text-cyber-cyan"
+                                        class="w-4 h-4"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -1279,187 +1231,351 @@ const t = useTranslations(lang);
                                             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                                         ></path>
                                     </svg>
-                                    Lima, Perú
+                                </div>
+                                <div>
+                                    <div
+                                        class="text-white font-medium text-sm mb-0.5"
+                                    >
+                                        {t("contact.info.location")}
+                                    </div>
+                                    <div class="text-gray-500 text-sm">
+                                        Lima, PerÃº
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="md:col-span-1">
-                            <h3
-                                class="text-white font-bold mb-4 text-sm uppercase tracking-wider"
-                            >
-                                {t("footer.quickLinks")}
-                            </h3>
-                            <div
-                                class="flex flex-col gap-2.5 text-sm text-gray-500"
-                            >
-                                {
-                                    [
-                                        ["#sobre-mi", t("nav.about")],
-                                        ["#habilidades", t("nav.skills")],
-                                        ["#proyectos", t("nav.projects")],
-                                        ["#experiencia", t("nav.experience")],
-                                        ["#educacion", t("nav.education")],
-                                        ["#contacto", t("nav.contact")],
-                                    ].map(([href, label]) => (
-                                        <a
-                                            href={href}
-                                            class="hover:text-cyber-cyan transition-colors w-max flex items-center gap-1.5"
-                                        >
-                                            <span class="text-cyber-cyan/40 font-mono-cyber text-xs">
-                                                &gt;
-                                            </span>
-                                            {label}
-                                        </a>
-                                    ))
-                                }
-                            </div>
-                        </div>
-
-                        <div class="md:col-span-1">
-                            <h3
-                                class="text-white font-bold mb-4 text-sm uppercase tracking-wider"
-                            >
-                                {t("footer.connect")}
-                            </h3>
-                            <p class="text-gray-500 text-sm mb-4">
-                                {t("footer.connectDesc")}
-                            </p>
-                            <div class="flex gap-3 mb-5">
-                                <a
-                                    href="https://github.com/Rodrigojsr12"
-                                    target="_blank"
-                                    class="flex items-center justify-center w-10 h-10 bg-cyber-card rounded-lg border border-cyber-border text-gray-500 hover:text-cyber-cyan hover:border-cyber-cyan/40 transition-all"
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="flex items-center justify-center w-9 h-9 rounded-lg bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/20 flex-shrink-0"
                                 >
                                     <svg
                                         class="w-4 h-4"
-                                        fill="currentColor"
+                                        fill="none"
+                                        stroke="currentColor"
                                         viewBox="0 0 24 24"
                                     >
                                         <path
-                                            fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                            clip-rule="evenodd"></path>
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        ></path>
                                     </svg>
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/in/rodrigojsr12/"
-                                    target="_blank"
-                                    class="flex items-center justify-center w-10 h-10 bg-cyber-card rounded-lg border border-cyber-border text-gray-500 hover:text-cyber-cyan hover:border-cyber-cyan/40 transition-all"
-                                >
-                                    <svg
-                                        class="w-4 h-4"
-                                        fill="currentColor"
-                                        viewBox="0 0 24 24"
+                                </div>
+                                <div>
+                                    <div
+                                        class="text-white font-medium text-sm mb-0.5"
                                     >
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <span
-                                    class="w-2 h-2 rounded-full bg-cyber-green animate-pulse"
-                                ></span>
-                                <span
-                                    class="text-cyber-cyan text-sm font-medium"
-                                    >{t("contact.available")}</span
-                                >
+                                        {t("contact.info.response")}
+                                    </div>
+                                    <div class="text-gray-500 text-sm">
+                                        {t("contact.info.responseVal")}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="border-t border-cyber-border pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-3 font-mono-cyber"
-                    >
-                        <div>{t("footer.rights")}</div>
-                        <div class="flex items-center gap-4">
-                            <span>{t("footer.builtWith")}</span>
+                    <div class="cyber-card p-6 md:p-8 animate-on-scroll">
+                        <h3 class="text-lg font-bold text-white mb-2">
+                            {t("contact.social.title")}
+                        </h3>
+                        <p class="text-gray-500 text-sm mb-5">
+                            {t("contact.social.subtitle")}
+                        </p>
+                        <div class="flex gap-4">
                             <a
-                                href="#top"
-                                class="hover:text-cyber-cyan transition-colors flex items-center gap-1"
+                                href="https://github.com/Rodrigojsr12"
+                                target="_blank"
+                                class="flex items-center justify-center w-11 h-11 bg-cyber-bg rounded-lg border border-cyber-border text-gray-500 hover:text-cyber-cyan hover:border-cyber-cyan/40 transition-all hover:shadow-[0_0_10px_rgba(0,212,255,0.2)]"
                             >
-                                {t("footer.backTop")}
                                 <svg
-                                    class="w-3.5 h-3.5"
-                                    fill="none"
-                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                    fill="currentColor"
                                     viewBox="0 0 24 24"
                                 >
                                     <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                        fill-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/rodrigojsr12/"
+                                target="_blank"
+                                class="flex items-center justify-center w-11 h-11 bg-cyber-bg rounded-lg border border-cyber-border text-gray-500 hover:text-cyber-cyan hover:border-cyber-cyan/40 transition-all hover:shadow-[0_0_10px_rgba(0,212,255,0.2)]"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a
+                                href="https://www.instagram.com/rodrijsr1205/"
+                                target="_blank"
+                                class="flex items-center justify-center w-11 h-11 bg-cyber-bg rounded-lg border border-cyber-border text-gray-500 hover:text-pink-400 hover:border-pink-400/40 transition-all hover:shadow-[0_0_10px_rgba(236,72,153,0.2)]"
+                                aria-label="Instagram"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                                    ></path>
                                 </svg>
                             </a>
                         </div>
                     </div>
-                </footer>
+
+                    <!-- Available for work -->
+                    <div
+                        class="flex items-center gap-3 px-5 py-3 cyber-card border-cyber-cyan/20 animate-on-scroll"
+                    >
+                        <span
+                            class="w-2.5 h-2.5 rounded-full bg-cyber-green animate-pulse flex-shrink-0"
+                        ></span>
+                        <span class="text-cyber-cyan text-sm font-medium"
+                            >{t("contact.available")}</span
+                        >
+                    </div>
+                </div>
             </div>
         </section>
 
-        <script>
-            // Typewriter effect for hero subtitle
-            const phrases = [
-                "I transform ideas into modern code",
-                "Full-Stack Developer",
-                "React · Python · TypeScript",
-                "Always building something cool",
-            ];
+        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+         FOOTER
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+        <footer class="border-t border-cyber-border mt-20 pt-12 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                <div class="md:col-span-1">
+                    <div
+                        class="text-cyber-cyan font-bold text-xl tracking-tight mb-4 font-mono-cyber"
+                    >
+                        &lt;RodriJSR/&gt;
+                    </div>
+                    <p class="text-gray-500 text-sm mb-5 max-w-sm">
+                        {t("footer.desc")}
+                    </p>
+                    <div
+                        class="text-gray-600 text-sm space-y-2 font-mono-cyber"
+                    >
+                        <div class="flex items-center gap-2">
+                            <svg
+                                class="w-4 h-4 text-cyber-cyan"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                ></path>
+                            </svg>
+                            rodrigo.jsr12@gmail.com
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg
+                                class="w-4 h-4 text-cyber-cyan"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"
+                                ></path><path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Lima, PerÃº
+                        </div>
+                    </div>
+                </div>
 
-            const el = document.getElementById("typewriter-text");
-            if (el) {
-                let phraseIdx = 0;
-                let charIdx = 0;
-                let deleting = false;
-                let pauseTimer: ReturnType<typeof setTimeout> | null = null;
+                <div class="md:col-span-1">
+                    <h3
+                        class="text-white font-bold mb-4 text-sm uppercase tracking-wider"
+                    >
+                        {t("footer.quickLinks")}
+                    </h3>
+                    <div class="flex flex-col gap-2.5 text-sm text-gray-500">
+                        {
+                            [
+                                ["#sobre-mi", t("nav.about")],
+                                ["#habilidades", t("nav.skills")],
+                                ["#proyectos", t("nav.projects")],
+                                ["#experiencia", t("nav.experience")],
+                                ["#educacion", t("nav.education")],
+                                ["#contacto", t("nav.contact")],
+                            ].map(([href, label]) => (
+                                <a
+                                    href={href}
+                                    class="hover:text-cyber-cyan transition-colors w-max flex items-center gap-1.5"
+                                >
+                                    <span class="text-cyber-cyan/40 font-mono-cyber text-xs">
+                                        &gt;
+                                    </span>
+                                    {label}
+                                </a>
+                            ))
+                        }
+                    </div>
+                </div>
 
-                function type() {
-                    const current = phrases[phraseIdx];
-                    if (!deleting) {
-                        el!.textContent = current.substring(0, charIdx + 1);
-                        charIdx++;
-                        if (charIdx === current.length) {
-                            deleting = true;
-                            pauseTimer = setTimeout(type, 2000);
-                            return;
-                        }
-                    } else {
-                        el!.textContent = current.substring(0, charIdx - 1);
-                        charIdx--;
-                        if (charIdx === 0) {
-                            deleting = false;
-                            phraseIdx = (phraseIdx + 1) % phrases.length;
-                        }
-                    }
-                    setTimeout(type, deleting ? 40 : 80);
+                <div class="md:col-span-1">
+                    <h3
+                        class="text-white font-bold mb-4 text-sm uppercase tracking-wider"
+                    >
+                        {t("footer.connect")}
+                    </h3>
+                    <p class="text-gray-500 text-sm mb-4">
+                        {t("footer.connectDesc")}
+                    </p>
+                    <div class="flex gap-3 mb-5">
+                        <a
+                            href="https://github.com/Rodrigojsr12"
+                            target="_blank"
+                            class="flex items-center justify-center w-10 h-10 bg-cyber-card rounded-lg border border-cyber-border text-gray-500 hover:text-cyber-cyan hover:border-cyber-cyan/40 transition-all"
+                        >
+                            <svg
+                                class="w-4 h-4"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/rodrigojsr12/"
+                            target="_blank"
+                            class="flex items-center justify-center w-10 h-10 bg-cyber-card rounded-lg border border-cyber-border text-gray-500 hover:text-cyber-cyan hover:border-cyber-cyan/40 transition-all"
+                        >
+                            <svg
+                                class="w-4 h-4"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="w-2 h-2 rounded-full bg-cyber-green animate-pulse"
+                        ></span>
+                        <span class="text-cyber-cyan text-sm font-medium"
+                            >{t("contact.available")}</span
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-cyber-border pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-3 font-mono-cyber"
+            >
+                <div>{t("footer.rights")}</div>
+                <div class="flex items-center gap-4">
+                    <span>{t("footer.builtWith")}</span>
+                    <a
+                        href="#top"
+                        class="hover:text-cyber-cyan transition-colors flex items-center gap-1"
+                    >
+                        {t("footer.backTop")}
+                        <svg
+                            class="w-3.5 h-3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</Layout>
+
+<script>
+    // Typewriter effect for hero subtitle
+    const phrases = [
+        "I transform ideas into modern code",
+        "Full-Stack Developer",
+        "React Â· Python Â· TypeScript",
+        "Always building something cool",
+    ];
+
+    const el = document.getElementById("typewriter-text");
+    if (el) {
+        let phraseIdx = 0;
+        let charIdx = 0;
+        let deleting = false;
+        let pauseTimer: ReturnType<typeof setTimeout> | null = null;
+
+        function type() {
+            const current = phrases[phraseIdx];
+            if (!deleting) {
+                el!.textContent = current.substring(0, charIdx + 1);
+                charIdx++;
+                if (charIdx === current.length) {
+                    deleting = true;
+                    pauseTimer = setTimeout(type, 2000);
+                    return;
                 }
-                type();
+            } else {
+                el!.textContent = current.substring(0, charIdx - 1);
+                charIdx--;
+                if (charIdx === 0) {
+                    deleting = false;
+                    phraseIdx = (phraseIdx + 1) % phrases.length;
+                }
             }
+            setTimeout(type, deleting ? 40 : 80);
+        }
+        type();
+    }
 
-            // Animate skill bars on scroll
-            const skillBars = document.querySelectorAll(".skill-bar");
-            const barObserver = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            const bar = entry.target as HTMLElement;
-                            const targetWidth = bar.style.width;
-                            bar.style.width = "0%";
-                            requestAnimationFrame(() => {
-                                bar.style.transition = "width 1s ease";
-                                bar.style.width = targetWidth;
-                            });
-                            barObserver.unobserve(bar);
-                        }
+    // Animate skill bars on scroll
+    const skillBars = document.querySelectorAll(".skill-bar");
+    const barObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target as HTMLElement;
+                    const targetWidth = bar.style.width;
+                    bar.style.width = "0%";
+                    requestAnimationFrame(() => {
+                        bar.style.transition = "width 1s ease";
+                        bar.style.width = targetWidth;
                     });
-                },
-                { threshold: 0.2 },
-            );
-            skillBars.forEach((bar) => barObserver.observe(bar));
-        </script>
-    </main></Layout
->
+                    barObserver.unobserve(bar);
+                }
+            });
+        },
+        { threshold: 0.2 },
+    );
+    skillBars.forEach((bar) => barObserver.observe(bar));
+</script>
